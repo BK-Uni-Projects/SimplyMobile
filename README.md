@@ -1,6 +1,7 @@
 # SimplyMobile
-Copy of SimplyMobile from https://github.com/sami1971/SimplyMobile
 ============
+
+Copy of SimplyMobile from https://github.com/sami1971/SimplyMobile
 
 This is new up to date version of SimplyMobile with some new features.
 
