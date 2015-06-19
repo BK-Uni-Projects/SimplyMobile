@@ -3,6 +3,7 @@ obj/
 .DS_Store
 *.userprefs
 *.suo
+UpgradeLog*.htm
 packages/
 Android/SimplyMobile.Data/Resources/Resource.Designer.cs
 Android/SimplyMobile.Data/Resources/Resource.Designer.cs
