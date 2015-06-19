@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3B1EC46-1514-4201-9938-D5F0A3259FD6}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TextSerializationTests</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>TextSerializationTests</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Xamarin.Android.NUnitLite" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Data" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="Mono.Data.Tds" />
+    <Reference Include="Jil.Android">
+      <HintPath>..\..\..\libs\Jil\Android\Jil.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Sigil.Android">
+      <HintPath>..\..\..\libs\Jil\Android\Sigil.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\JsonNetTests.cs">
+      <Link>JsonNetTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Test.cs">
+      <Link>Test.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\TestBase.cs">
+      <Link>TestBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\Animal.cs">
+      <Link>Dtos\Animal.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\Cat.cs">
+      <Link>Dtos\Cat.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\Dog.cs">
+      <Link>Dtos\Dog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\IAnimal.cs">
+      <Link>Dtos\IAnimal.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\Person.cs">
+      <Link>Dtos\Person.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\ServiceStackTests.cs">
+      <Link>ServiceStackTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\DateTimeDto.cs">
+      <Link>Dtos\DateTimeDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\Primitives.cs">
+      <Link>Dtos\Primitives.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\JsonNetSanity.cs">
+      <Link>JsonNetSanity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\SanityCheckTests.cs">
+      <Link>SanityCheckTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\ServiceStackSanityTests.cs">
+      <Link>ServiceStackSanityTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\DictionaryData.cs">
+      <Link>Dtos\DictionaryData.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\SomeKey.cs">
+      <Link>Dtos\SomeKey.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\FileLoadTests.cs">
+      <Link>FileLoadTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\Dtos\HighlyNested.cs">
+      <Link>Dtos\HighlyNested.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\FastJsonFileLoad.cs">
+      <Link>FastJsonFileLoad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\FastJsonSanityTests.cs">
+      <Link>FastJsonSanityTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\FastJsonTests.cs">
+      <Link>FastJsonTests.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\JsonNetFileLoad.cs">
+      <Link>JsonNetFileLoad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\ServiceStackFileLoad.cs">
+      <Link>ServiceStackFileLoad.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Core\Tests\TextSerializationTests\XmlSerializationTests.cs">
+      <Link>XmlSerializationTests.cs</Link>
+    </Compile>
+    <Compile Include="ListSerializationSpeed.cs" />
+    <Compile Include="FastJsonList.cs" />
+    <Compile Include="ServiceStackList.cs" />
+    <Compile Include="JsonNetList.cs" />
+    <Compile Include="..\..\..\iOS\Tests\TextSerializationTests\RuntimeXmlTests.cs">
+      <Link>RuntimeXmlTests.cs</Link>
+    </Compile>
+    <Compile Include="Dtos\BooleanList.cs" />
+    <Compile Include="BooleanSpeedTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="..\..\..\Core\Tests\TextSerializationTests\ProtoBufTests.cs">
+      <Link>ProtoBufTests.cs</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Plugins\Text\SimplyMobile.Text.JsonNet\SimplyMobile.Text.JsonNet.csproj">
+      <Project>{30ACCC6D-D6F4-4F50-8FE7-3A3E223F9B55}</Project>
+      <Name>SimplyMobile.Text.JsonNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugins\SimplyMobile.Text.ServiceStack\SimplyMobile.Text.ServiceStack.csproj">
+      <Project>{7886EBA5-D091-4AA1-B5BE-37DBC892AD19}</Project>
+      <Name>SimplyMobile.Text.ServiceStack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\SimplyMobile.Text.FastJson\SimplyMobile.Text.FastJson.Android.csproj">
+      <Project>{A14F3F44-A9B3-44EE-A5CF-990D91964177}</Project>
+      <Name>SimplyMobile.Text.FastJson.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\SimplyMobile.Text\SimplyMobile.Text.csproj">
+      <Project>{F367F89E-E79F-4332-AD93-85E7CFF7391C}</Project>
+      <Name>SimplyMobile.Text</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Core\Plugins\SimplyMobile.Text.RuntimeSerializer\SimplyMobile.Text.RuntimeSerializer.csproj">
+      <Project>{8F3643A8-5597-42B9-A1CD-ACA1E06226A3}</Project>
+      <Name>SimplyMobile.Text.RuntimeSerializer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidAsset Include="..\..\..\Core\Tests\TextSerializationTests\TestData\boon-small.json.txt">
+      <Link>Assets\TestData\boon-small.json.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\..\Core\Tests\TextSerializationTests\TestData\dicos.json.txt">
+      <Link>Assets\TestData\dicos.json.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\..\Core\Tests\TextSerializationTests\TestData\fathers.json.txt">
+      <Link>Assets\TestData\fathers.json.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\..\Core\Tests\TextSerializationTests\TestData\small.json.txt">
+      <Link>Assets\TestData\small.json.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\..\Core\Tests\TextSerializationTests\TestData\tiny.json.txt">
+      <Link>Assets\TestData\tiny.json.txt</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\..\..\Core\Tests\TextSerializationTests\TestData\_oj-highly-nested.json.txt">
+      <Link>Assets\TestData\_oj-highly-nested.json.txt</Link>
+    </AndroidAsset>
+  </ItemGroup>
+</Project>

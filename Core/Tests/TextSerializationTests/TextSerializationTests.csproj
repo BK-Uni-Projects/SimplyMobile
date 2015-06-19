@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15517F8C-42DB-4D77-831D-5A6E815F3914}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TextSerializationTests</RootNamespace>
+    <AssemblyName>TextSerializationTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RestorePackages>true</RestorePackages>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Windows|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug_Windows</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Windows_Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Windows_Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinarySerializerTests.cs" />
+    <Compile Include="ComboJsonTests.cs" />
+    <Compile Include="JsonNetSerializerServiceStackDeserializer.cs" />
+    <Compile Include="ServiceStackSerializerJsonNetDeserializer.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Dtos\Person.cs" />
+    <Compile Include="Dtos\IAnimal.cs" />
+    <Compile Include="Dtos\Cat.cs" />
+    <Compile Include="Dtos\Dog.cs" />
+    <Compile Include="JsonNetTests.cs" />
+    <Compile Include="Dtos\Animal.cs" />
+    <Compile Include="ServiceStackTests.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="Dtos\Primitives.cs" />
+    <Compile Include="Dtos\DateTimeDto.cs" />
+    <Compile Include="SanityCheckTests.cs" />
+    <Compile Include="JsonNetSanity.cs" />
+    <Compile Include="ServiceStackSanityTests.cs" />
+    <Compile Include="Dtos\DictionaryData.cs" />
+    <Compile Include="Dtos\SomeKey.cs" />
+    <Compile Include="FileLoadTests.cs" />
+    <Compile Include="Dtos\HighlyNested.cs" />
+    <Compile Include="FastJsonFileLoad.cs" />
+    <Compile Include="FastJsonSanityTests.cs" />
+    <Compile Include="FastJsonTests.cs" />
+    <Compile Include="JsonNetFileLoad.cs" />
+    <Compile Include="ServiceStackFileLoad.cs" />
+    <Compile Include="XmlSerializationTests.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plugins\Text\SimplyMobile.Text.JsonNet\SimplyMobile.Text.JsonNet.csproj">
+      <Project>{30ACCC6D-D6F4-4F50-8FE7-3A3E223F9B55}</Project>
+      <Name>SimplyMobile.Text.JsonNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SimplyMobile.Text\SimplyMobile.Text.csproj">
+      <Project>{F367F89E-E79F-4332-AD93-85E7CFF7391C}</Project>
+      <Name>SimplyMobile.Text</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugins\SimplyMobile.Text.ServiceStack\SimplyMobile.Text.ServiceStack.csproj">
+      <Project>{0854603B-BBB7-4AE6-A3CE-598803AC1214}</Project>
+      <Name>SimplyMobile.Text.ServiceStack</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugins\SimplyMobile.Text.FastJson\SimplyMobile.Text.FastJson.csproj">
+      <Project>{A0DC06F3-1E79-42F1-A14C-544597305F53}</Project>
+      <Name>SimplyMobile.Text.FastJson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UnitTesting\UnitTestCore\SimplyMobile.UnitTestCore.csproj">
+      <Project>{C70D0E28-2972-4FE9-B55E-8BA53E8136C8}</Project>
+      <Name>SimplyMobile.UnitTestCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ProtoBufTests.cs" />
+    <None Include="ProtoBufSanityTests.cs" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>
