@@ -6,8 +6,6 @@ obj/
 packages/
 Android/SimplyMobile.Data/Resources/Resource.Designer.cs
 Android/SimplyMobile.Data/Resources/Resource.Designer.cs
-iOS/Components/*
-Android/Components/*
 Core/Tests/TextSerializationTests/test-results/TextSerializationTests.csproj-Debug-2013-11-07.xml
 
 *.test-cache
