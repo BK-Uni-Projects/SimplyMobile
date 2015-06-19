@@ -3,7 +3,7 @@ SimplyMobile
 
 Copy of SimplyMobile from https://github.com/sami1971/SimplyMobile
 
-This is new up to date version of SimplyMobile with some new features. Android > 2.3, IOS and Windows Phone 8 is now supported.
+This is new up to date version of SimplyMobile with some new features. Android > 2.3, iOS and Windows Phone 8 is now supported.
 
 Before you start enable "NuGet Package Restore" (https://docs.nuget.org/consume/package-restore)
 
