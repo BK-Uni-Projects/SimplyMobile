@@ -1,5 +1,8 @@
-SimplyMobile
+# SimplyMobile
+Copy of SimplyMobile from https://github.com/sami1971/SimplyMobile
 ============
+
+This is new up to date version of SimplyMobile with some new features.
 
 Collection of abstracted mobile functionalities. Xamarin.iOS, Xamarin.Android &amp; WP8.
 
